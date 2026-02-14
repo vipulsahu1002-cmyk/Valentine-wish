@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Meethi ❤️</title>
+
+<style>
+body{
+margin:0;
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+font-family:Arial;
+background:linear-gradient(135deg,#e66283,#ff7eb3);
+color:white;
+overflow:hidden;
+}
+
+h1{
+font-size:28px;
+margin:20px;
+}
+
+.buttons{
+margin-top:20px;
+}
+
+button{
+padding:12px 25px;
+font-size:18px;
+border:none;
+border-radius:10px;
+cursor:pointer;
+margin:10px;
+transition:0.3s;
+}
+
+#yes{
+background:#ff2e63;
+color:white;
+}
+
+#no{
+background:#333;
+color:white;
+}
+
+/* Second Page */
+.lovePage{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(135deg,#f25fa4,#fdf8f9);
+color:white;
+animation:fadeIn 1s ease-in-out;
+padding:20px;
+}
+
+@keyframes fadeIn{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+.lovePage img{
+width:220px;
+margin-bottom:20px;
+animation:bounce 2s infinite;
+}
+
+@keyframes bounce{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-10px);}
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Meethi 💕<br>Will You Be My Valentine? 💖</h1>
+
+<div class="buttons">
+<button id="yes" onclick="goToLove()">Haan! ❤️</button>
+<button id="no" onclick="growYes()">No🥲 </button>
+</div>
+
+<script>
+
+let size = 18;
+
+function growYes(){
+size += 10;
+let yesBtn = document.getElementById("yes");
+yesBtn.style.fontSize = size + "px";
+yesBtn.style.padding = (size/1.5) + "px " + (size*1.5) + "px";
+}
+
+function goToLove(){
+document.body.innerHTML = `
+<div class="lovePage">
+<img src="https://tenor.com/search/cute-cats-kissing-gifs">
+<h1>Yayyyy Meethi 🥰💖</h1>
+<p style="font-size:22px; max-width:500px;">
+You just made my world brighter ❤️✨<br><br>
+I promise to always make you smile 😊<br>
+Happy Valentine’s Day My Love 💕
+</p>
+</div>
+`;
+}
+
+</script>
+
+</body>
+</html>
